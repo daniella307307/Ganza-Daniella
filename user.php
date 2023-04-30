@@ -33,7 +33,7 @@
     <input type="radio"  id="exampleRadio1" value='Female' name="gender"><label for="female">Female</label>
 </div>
 <div class="button">
-<input class="btn btn-primary" type="submit" value="Submit" name="submit">
+<input class="btn btn-primary" type="submit" value="Submit" name="submit" >
 </div>
 </form>
 </div>

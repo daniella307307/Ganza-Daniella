@@ -1,5 +1,5 @@
 <?php
-include 'connection.php'; 
+include 'connection.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,12 +21,18 @@ include 'connection.php';
             float:left;
             margin-left:0.5em;
         }
+        #download{
+          float:right;
+        }
     </style>
 </head>
 <body>
    <div class="container">
+    <form action="download.php" method="post">
     <button class="btn btn-primary my-5"><a href="user.php" class="text-light">Add User</a></button>
-    <table class="table table-hoverable">
+    <input class="btn btn-primary my-5" id='download' type="submit" value="Download" name="download">
+    </form>
+<table class="table table-hoverable">
   <thead>
     <tr>
       <th scope="col">Id</th>

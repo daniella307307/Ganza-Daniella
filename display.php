@@ -24,12 +24,15 @@ include 'connection.php';
         #download{
           float:right;
         }
+        #button{
+          float:left;
+        }
     </style>
 </head>
 <body>
    <div class="container">
+    <button class="btn btn-primary my-5" id='button'><a href="user.php" class="text-light">Add User</a></button>
     <form action="download.php" method="post">
-    <button class="btn btn-primary my-5"><a href="user.php" class="text-light">Add User</a></button>
     <input class="btn btn-primary my-5" id='download' type="submit" value="Download" name="download">
     </form>
 <table class="table table-hoverable">

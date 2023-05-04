@@ -46,7 +46,6 @@ INSERT INTO `people` (`id`, `fullname`, `email`, `password`, `gender`, `phone_nu
 (4, 'Imuragire', 'michelle12@gmail.com', 'f924c83dd4434b1985d3e6a3a2963e4266c52913', 'Male', 2147483647),
 (8, 'Ineza Celia', 'celia@gmail.com', '51eac6b471a284d3341d8c0c63d0f1a286262a18', 'Female', 789567423),
 (11, 'Preston Irakoze', 'preston30@gmail.com', 'c48ea64e72384e0847b396b2874916ef36cc1a6a', 'Male', 2147483647);
-
 -- --------------------------------------------------------
 
 --

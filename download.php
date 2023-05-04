@@ -1,7 +1,9 @@
 <?php
 include 'connection.php';
 $output = '';
+
 if(isset($_POST['download'])){
+    $format=$_GET['format'];
     $sql = "SELECT * FROM people";
     $result = $con->query($sql);
    
@@ -12,7 +14,6 @@ if(isset($_POST['download'])){
                     <th>Email</th>
                     <th>Mobile</th>
                     <th>Gender</th>
-                    <th>Password</th>
                     </tr>';
 
         while($row = mysqli_fetch_assoc($result)){
@@ -21,16 +22,16 @@ if(isset($_POST['download'])){
                         <td>'.$row['email'].'</td>
                         <td>'.$row['phone_number'].'</td>
                         <td>'.$row['gender'].'</td>
-                        <td>'.$row['password'].'</td>
+                
                  </tr>';
         }
         echo '</table>';
-        if(true){
+        if($format == 'PDF'){
+            header('Content-type: application/pdf');
+            header('Content-Disposition: attachment; filename=reports.pdf');
+        }else if($format == 'XLS'){
             header('Content-type: application/xls');
             header('Content-Disposition: attachment; filename=reports.xls');
-        }else{
-            header('Content-type: application/doc');
-            header('Content-Disposition: attachment; filename=reports.doc');
         }
         echo $output;
     } else {
